@@ -1,46 +1,30 @@
+/* eslint-disable indent */
 import React from 'react';
 import Square from './Square';
 
-class Button extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            squares: Array(9).fill(null),
-        };
-    }
-
-    renderSquare(i) {
-        return (
-            <Square value={i} />
-        );
-    }
-
-    render() {
-        return (
-            <div>
-                <div className="board-row">
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                    {this.renderSquare(9)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                    {this.renderSquare(6)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                    {this.renderSquare(3)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(".")}
-                    {this.renderSquare(0)}
-                    {this.renderSquare('=')}
-                </div>
-            </div>
-        );
-    }
-}
+const Button = () => (
+    <div>
+        <div className="board-row">
+            <Square value={7} />
+            <Square value={8} />
+            <Square value={9} />
+        </div>
+        <div className="board-row">
+            <Square value={4} />
+            <Square value={5} />
+            <Square value={6} />
+        </div>
+        <div className="board-row">
+            <Square value={1} />
+            <Square value={2} />
+            <Square value={3} />
+        </div>
+        <div className="board-row">
+            <Square value="." />
+            <Square value={0} />
+            <Square value="=" />
+        </div>
+    </div>
+);
 
 export default Button
