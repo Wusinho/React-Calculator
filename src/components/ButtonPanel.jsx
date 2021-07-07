@@ -1,13 +1,5 @@
-/* eslint-disable */
 import React from 'react';
-
-const Square = (props) => {
-    return (
-        <button className="square" >
-            {props.value}
-        </button>
-    );
-};
+import Square from './Square';
 
 class Button extends React.Component {
     constructor(props) {
@@ -24,7 +16,6 @@ class Button extends React.Component {
     }
 
     render() {
-
         return (
             <div>
                 <div className="board-row">
@@ -50,17 +41,6 @@ class Button extends React.Component {
             </div>
         );
     }
-
-
-
-
 }
-
-
-
-
-
-
-
 
 export default Button
