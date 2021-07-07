@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSWebpackPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index',
@@ -25,6 +26,14 @@ module.exports = {
           {
             loader: 'html-loader',
           },
+        ],
+      },
+      {
+        test: /\.(s*)css$/,
+        use: [
+          { loader: MiniCSSWebpackPlugin.loader },
+          'css-loader',
+          'sass-laoder',
         ],
       },
     ],
