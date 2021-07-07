@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "React-calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wusinho/React-Calculator.git"
+  },
+  "author": "Heber Lazo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wusinho/React-Calculator/issues"
+  },
+  "homepage": "https://github.com/Wusinho/React-Calculator#readme"
+}
