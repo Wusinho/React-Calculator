@@ -1,13 +1,7 @@
 /* eslint-disable */
 import React from 'react';
+import Rectangle from './Rectangle.jsx'
 
-const Rectangle = (props) => {
-    return (
-        <button className="rectangle" >
-            {props.value}
-        </button>
-    );
-};
 
 class RectangleDisplay extends React.PureComponent {
     constructor(props) {
