@@ -9,7 +9,9 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: '21321',
+      value2: '12312',
+      simbol: '+',
     };
   }
 
