@@ -1,7 +1,3 @@
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
-/* eslint-disable class-methods-use-this */
 import React from 'react';
 import Square from './Square';
 import Rectangle from './Display';
