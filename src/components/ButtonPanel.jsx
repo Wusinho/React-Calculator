@@ -9,9 +9,9 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '21321',
-      value2: '12312',
-      simbol: '+',
+      value: '',
+      value2: '',
+      simbol: '',
     };
   }
 
@@ -19,11 +19,42 @@ class Button extends React.Component {
     this.setState((prevState) => ({ value: prevState.value + i }));
   }
 
+  handleSecondInput(i) {
+    this.setState((prevState) => ({ value2: prevState.value }));
+    this.setState({ simbol: i });
+    this.setState({ value: '' });
+  }
+
+  Iqual() {
+    // const a = parseInt(this.state.value2,10);
+    // const b = parseInt(this.state.value,10);
+    // const total = a + b;
+    // console.log(total);
+  }
+
   renderSquare(i) {
     return (
       <Square
         value={i}
         onClick={() => this.handleChange(i)}
+      />
+    );
+  }
+
+  renderOperator(i) {
+    return (
+      <Square
+        value={i}
+        onClick={() => this.handleSecondInput()}
+      />
+    );
+  }
+
+  renderIqual(i) {
+    return (
+      <Square
+        value={i}
+        onClick={() => this.Iqual()}
       />
     );
   }
@@ -40,31 +71,31 @@ class Button extends React.Component {
           {this.renderSquare('AC')}
           {this.renderSquare('+/-')}
           {this.renderSquare('%')}
-          {this.renderSquare('/')}
+          {this.renderOperator('/')}
         </div>
         <div className="board-row">
           {this.renderSquare('7')}
           {this.renderSquare('8')}
           {this.renderSquare('9')}
-          {this.renderSquare('X')}
+          {this.renderOperator('X')}
         </div>
         <div className="board-row">
           {this.renderSquare('4')}
           {this.renderSquare('5')}
           {this.renderSquare('6')}
-          {this.renderSquare('-')}
+          {this.renderOperator('-')}
         </div>
         <div className="board-row">
           {this.renderSquare('1')}
           {this.renderSquare('2')}
           {this.renderSquare('3')}
-          {this.renderSquare('+')}
+          {this.renderOperator('+')}
         </div>
         <div className="board-row">
           {this.renderSquare('')}
           {this.renderSquare('.')}
           {this.renderSquare('0')}
-          {this.renderSquare('=')}
+          {this.renderIqual('=')}
         </div>
       </div>
     );
