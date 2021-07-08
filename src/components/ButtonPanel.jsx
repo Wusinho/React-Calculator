@@ -1,9 +1,11 @@
+/* eslint-disable react/no-access-state-in-setstate */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import Square from './Square';
 import Rectangle from './Display';
+import Functions from './Functions';
 
 class Button extends React.Component {
   constructor(props) {
@@ -11,7 +13,8 @@ class Button extends React.Component {
     this.state = {
       value: '',
       value2: '',
-      simbol: '',
+      symbol: '',
+      toNegative: true,
     };
   }
 
@@ -21,15 +24,33 @@ class Button extends React.Component {
 
   handleSecondInput(i) {
     this.setState((prevState) => ({ value2: prevState.value }));
-    this.setState({ simbol: i });
+    this.setState(() => ({ symbol: i }));
+    this.setState({ value: '' });
+  }
+
+  handleNegative() {
+    const { toNegative } = this.state;
+    if (toNegative) {
+      this.setState((prevState) => ({ value: `-${prevState.value}`, toNegative: false }));
+    } else if (!toNegative) {
+      this.setState((prevState) => ({ value: prevState.value.substring(1), toNegative: true }));
+    }
+  }
+
+  handleAC() {
     this.setState({ value: '' });
   }
 
   Iqual() {
-    // const a = parseInt(this.state.value2,10);
-    // const b = parseInt(this.state.value,10);
-    // const total = a + b;
-    // console.log(total);
+    const { value, value2, symbol } = this.state;
+    const iqual = Functions(value2, value, symbol);
+    this.setState({ value: iqual });
+  }
+
+  Percentage(i) {
+    const { value } = this.state;
+    const iqual = Functions(value, 0, i);
+    this.setState({ value: iqual });
   }
 
   renderSquare(i) {
@@ -45,7 +66,7 @@ class Button extends React.Component {
     return (
       <Square
         value={i}
-        onClick={() => this.handleSecondInput()}
+        onClick={() => this.handleSecondInput(i)}
       />
     );
   }
@@ -59,6 +80,33 @@ class Button extends React.Component {
     );
   }
 
+  renderPercent(i) {
+    return (
+      <Square
+        value={i}
+        onClick={() => this.Percentage(i)}
+      />
+    );
+  }
+
+  renderNegative(i) {
+    return (
+      <Square
+        value={i}
+        onClick={() => this.handleNegative(i)}
+      />
+    );
+  }
+
+  renderAC(i) {
+    return (
+      <Square
+        value={i}
+        onClick={() => this.handleAC()}
+      />
+    );
+  }
+
   render() {
     const { value } = this.state;
     return (
@@ -68,9 +116,9 @@ class Button extends React.Component {
         </div>
 
         <div className="board-row">
-          {this.renderSquare('AC')}
-          {this.renderSquare('+/-')}
-          {this.renderSquare('%')}
+          {this.renderAC('AC')}
+          {this.renderNegative('+/-')}
+          {this.renderPercent('%')}
           {this.renderOperator('/')}
         </div>
         <div className="board-row">

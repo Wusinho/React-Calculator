@@ -1,30 +1,27 @@
-import Big from 'big';
+import Big from 'big.js';
 
-const mathFunctions = (a, b, simbol) => {
-  const n1 = Big(a || '0');
-  const n2 = Big(b || '0');
-
+// eslint-disable-next-line consistent-return
+const mathFunctions = (a, b, symbol) => {
+  const n1 = new Big(a);
+  const n2 = new Big(b);
+  const n3 = new Big(100);
   let result = 0;
-  switch (simbol) {
-    case '÷':
-      result = n1.div(n2);
-      break;
-    case 'X':
-      result = n1.times(n2);
-      break;
-    case '-':
-      result = n1.minus(n2);
-      break;
-    case '+':
-      result = n1.plus(n2);
-      break;
-    case '=':
-      result = n1.Div(n2);
-      break;
-    default:
-      return result.toString();
+  if (symbol === '/') {
+    result = (n1.div(n2));
+    return result.valueOf();
+  } if (symbol === 'X') {
+    result = (n1.times(n2));
+    return result.valueOf();
+  } if (symbol === '-') {
+    result = (n1.minus(n2));
+    return result.valueOf();
+  } if (symbol === '+') {
+    result = (n1.plus(n2));
+    return result.valueOf();
+  } if (symbol === '%') {
+    result = (n1.div(n3));
+    return result.valueOf();
   }
-  return result.toString();
 };
 
 export { mathFunctions as default };
