@@ -2,8 +2,8 @@ import Big from 'big.js';
 
 // eslint-disable-next-line consistent-return
 const mathFunctions = (a, b, symbol) => {
-  const n1 = new Big(a);
-  const n2 = new Big(b);
+  const n1 = new Big(a || 0);
+  const n2 = new Big(b || 0);
   const n3 = new Big(100);
   let result = 0;
   if (symbol === '/') {
