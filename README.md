@@ -2,9 +2,9 @@
 
 ## About
 
-This project is an App Calculator using React
+This project is an App Calculator using React.
 
-<!-- ![screenshot](./src/assets/Todo-list.png) -->
+![screenshot](./src/assets/static/Screenshot.png)
 
 ## Live View
 
