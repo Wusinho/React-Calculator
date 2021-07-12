@@ -3,15 +3,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Square = (props) => (<button className="square" onClick={props.onClick}>{props.value}</button>);
+const Squarebtn = (props) => (<button className="square" onClick={props.onClick}>{props.value}</button>);
 
-Square.propTypes = {
+Squarebtn.propTypes = {
   value: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
 
-Square.defaultProps = {
+Squarebtn.defaultProps = {
   value: '0',
 };
 
-export default Square;
+export default Squarebtn;

@@ -2,13 +2,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Rectangle = (props) => (<div className="rectangle">{props.value || '0'}</div>);
+const Display = (props) => (<div className="rectangle">{props.value || '0'}</div>);
 
-Rectangle.propTypes = {
+Display.propTypes = {
   value: PropTypes.string,
 };
 
-Rectangle.defaultProps = {
+Display.defaultProps = {
   value: '0',
 };
-export default Rectangle;
+export default Display;

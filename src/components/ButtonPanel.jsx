@@ -1,6 +1,6 @@
 import React from 'react';
-import Square from './Square';
-import Rectangle from './Display';
+import Squarebtn from './Button';
+import Display from './Display';
 import Functions from './Functions';
 
 class Button extends React.Component {
@@ -51,7 +51,7 @@ class Button extends React.Component {
 
   renderSquare(i) {
     return (
-      <Square
+      <Squarebtn
         value={i}
         onClick={() => this.handleChange(i)}
       />
@@ -60,7 +60,7 @@ class Button extends React.Component {
 
   renderOperator(i) {
     return (
-      <Square
+      <Squarebtn
         value={i}
         onClick={() => this.handleSecondInput(i)}
       />
@@ -69,7 +69,7 @@ class Button extends React.Component {
 
   renderIqual(i) {
     return (
-      <Square
+      <Squarebtn
         value={i}
         onClick={() => this.Iqual()}
       />
@@ -78,7 +78,7 @@ class Button extends React.Component {
 
   renderPercent(i) {
     return (
-      <Square
+      <Squarebtn
         value={i}
         onClick={() => this.Percentage(i)}
       />
@@ -87,7 +87,7 @@ class Button extends React.Component {
 
   renderNegative(i) {
     return (
-      <Square
+      <Squarebtn
         value={i}
         onClick={() => this.handleNegative(i)}
       />
@@ -96,7 +96,7 @@ class Button extends React.Component {
 
   renderAC(i) {
     return (
-      <Square
+      <Squarebtn
         value={i}
         onClick={() => this.handleAC()}
       />
@@ -108,7 +108,7 @@ class Button extends React.Component {
     return (
       <div>
         <div className="board-row">
-          <Rectangle value={value} />
+          <Display value={value} />
         </div>
 
         <div className="board-row">
