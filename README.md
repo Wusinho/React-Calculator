@@ -31,7 +31,7 @@ This project is an App Calculator using React.
 Run the following comands in the terminal in the next order:
 
 - Step 1:  
-  $ cd "here comes the path of your selected directory (double quotes must not be here)"
+  Open your terminal and cd where you want to store the project
 
 - Step 2:
   $ git clone https://github.com/Wusinho/React-Calculator/tree/Development
