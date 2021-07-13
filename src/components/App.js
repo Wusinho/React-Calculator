@@ -1,12 +1,10 @@
 import React from 'react';
-import ButtonPanel from './ButtonPanel';
-import Display from './Display';
+import { Button } from './ButtonPanel';
 import '../assets/styles/App.scss';
 
 const App = () => (
   <>
-    <Display />
-    <ButtonPanel />
+    <Button />
   </>
 );
 
