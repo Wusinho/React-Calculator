@@ -1,10 +1,12 @@
 import React from 'react';
-import CalculatoPanel from './ButtonPanel';
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
 import '../assets/styles/App.scss';
 
 const App = () => (
   <>
-    <CalculatoPanel />
+    <Display />
+    <ButtonPanel />
   </>
 );
 

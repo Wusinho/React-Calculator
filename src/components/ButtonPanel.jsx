@@ -2,13 +2,17 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = ({ clickHandler }) => {
+const ButtonPanel = (props) => {
+  const { clickHandler } = props;
   const clickHandle = (buttonName) => {
     clickHandler(buttonName);
   };
 
   return (
     <>
+      <div className="board-row">
+        { props.children }
+      </div>
       <div className="board-row">
         <Button buttonName="AC" handlerClick={clickHandle} />
         <Button buttonName="+/-" handlerClick={clickHandle} />
