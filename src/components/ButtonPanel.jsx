@@ -141,9 +141,4 @@ class Button extends React.Component {
   }
 }
 
-function value() {
-  const getValue = new Button();
-  return (getValue.state.value);
-}
-
-export { Button, value };
+export default Button;
