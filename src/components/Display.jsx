@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 const Display = ({ value }) => (
   <div className="board-row">
-    <div className="rectangle">{value}</div>
-    ;
+    <div className="rectangle">{value || 0}</div>
   </div>
 );
 Display.propTypes = {

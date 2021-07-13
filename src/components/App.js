@@ -1,10 +1,13 @@
 import React from 'react';
-import Button from './ButtonPanel';
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
 import '../assets/styles/App.scss';
 
 const App = () => (
+
   <>
-    <Button />
+    <Display value={ButtonPanel.value} />
+    <ButtonPanel />
   </>
 );
 

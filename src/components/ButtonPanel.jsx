@@ -13,7 +13,7 @@ class Button extends React.Component {
     };
   }
 
-  handleChange(i) {
+  handleNumbers(i) {
     this.setState((prevState) => ({ value: prevState.value + i }));
   }
 
@@ -49,7 +49,7 @@ class Button extends React.Component {
   }
 
   renderbtn(i) {
-    if (i === '+' || i === '-' || i === '*' || i === '/') {
+    if (i === '+' || i === '-' || i === 'X' || i === '/') {
       return (
         <Squarebtn
           name={i}
@@ -89,7 +89,7 @@ class Button extends React.Component {
     return (
       <Squarebtn
         name={i}
-        onClick={() => this.handleChange(i)}
+        onClick={() => this.handleNumbers(i)}
       />
     );
   }
