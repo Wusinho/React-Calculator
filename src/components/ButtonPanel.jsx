@@ -94,15 +94,6 @@ class Button extends React.Component {
     );
   }
 
-  renderSquare(i) {
-    return (
-      <Squarebtn
-        name={i}
-        onClick={() => this.handleChange(i)}
-      />
-    );
-  }
-
   render() {
     return (
       <div>
