@@ -1,8 +1,7 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = (props) => (<div className="rectangle">{props.value || '0'}</div>);
+const Display = ({ value }) => (<div className="rectangle">{value || '0'}</div>);
 
 Display.propTypes = {
   value: PropTypes.string,

@@ -52,7 +52,7 @@ class Button extends React.Component {
   renderSquare(i) {
     return (
       <Squarebtn
-        value={i}
+        name={i}
         onClick={() => this.handleChange(i)}
       />
     );
@@ -61,7 +61,7 @@ class Button extends React.Component {
   renderOperator(i) {
     return (
       <Squarebtn
-        value={i}
+        name={i}
         onClick={() => this.handleSecondInput(i)}
       />
     );
@@ -70,7 +70,7 @@ class Button extends React.Component {
   renderIqual(i) {
     return (
       <Squarebtn
-        value={i}
+        name={i}
         onClick={() => this.Iqual()}
       />
     );
@@ -79,7 +79,7 @@ class Button extends React.Component {
   renderPercent(i) {
     return (
       <Squarebtn
-        value={i}
+        name={i}
         onClick={() => this.Percentage(i)}
       />
     );
@@ -88,7 +88,7 @@ class Button extends React.Component {
   renderNegative(i) {
     return (
       <Squarebtn
-        value={i}
+        name={i}
         onClick={() => this.handleNegative(i)}
       />
     );
@@ -97,7 +97,7 @@ class Button extends React.Component {
   renderAC(i) {
     return (
       <Squarebtn
-        value={i}
+        name={i}
         onClick={() => this.handleAC()}
       />
     );

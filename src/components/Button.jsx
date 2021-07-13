@@ -1,16 +1,15 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Squarebtn = (props) => (<button type="button" className="square" onClick={props.onClick}>{props.value}</button>);
+const Squarebtn = ({ onClick, name }) => (<button type="button" className="square" onClick={onClick}>{name}</button>);
 
 Squarebtn.propTypes = {
-  value: PropTypes.string,
+  name: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
 
 Squarebtn.defaultProps = {
-  value: '0',
+  name: '0',
 };
 
 export default Squarebtn;
