@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
@@ -37,6 +37,7 @@ const ButtonPanel = ({ clickHandler }) => {
         <Button buttonName="0" handlerClick={clickHandle} />
         <Button buttonName="." handlerClick={clickHandle} />
         <Button buttonName="=" handlerClick={clickHandle} />
+        <Button />
       </div>
     </>
   );
