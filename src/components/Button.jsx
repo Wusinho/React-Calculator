@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Squarebtn = ({ buttonName, handlerclick, type }) => {
+const Squarebtn = (props) => {
+  const { buttonName, type } = props;
   let color = '';
   if (type === 'sp') {
     color = 'purple';
@@ -10,13 +11,12 @@ const Squarebtn = ({ buttonName, handlerclick, type }) => {
   }
 
   return (
-    <button type="button" className={`square ${color}`} classbuttonname="square" onClick={handlerclick}>{buttonName}</button>
+    <button type="button" className={`square ${color}`} classbuttonname="square">{buttonName}</button>
   );
 };
 
 Squarebtn.propTypes = {
   buttonName: PropTypes.string,
-  handlerclick: PropTypes.func.isRequired,
   type: PropTypes.string,
 
 };
