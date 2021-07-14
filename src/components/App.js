@@ -6,7 +6,7 @@ import '../assets/styles/App.scss';
 const App = () => (
 
   <>
-    <Display value={ButtonPanel.value} />
+    <Display />
     <ButtonPanel />
   </>
 );
