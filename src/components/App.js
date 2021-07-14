@@ -2,6 +2,7 @@ import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
+// import calculate from '../logic/calculate';
 import '../assets/styles/App.scss';
 
 class App extends React.Component {
@@ -11,6 +12,8 @@ class App extends React.Component {
       total: null,
       next: null,
       operation: null,
+      point: false,
+      isNegative: false,
     };
   }
 
@@ -20,13 +23,13 @@ class App extends React.Component {
       this.setState({ ...result });
     };
     const { next, total } = this.state;
-
     return (
       <div>
-        <Display result={(next) || (total)} />
+        <Display result={(next || total)} />
         <ButtonPanel clickHandler={(e) => handleClick(e)} />
       </div>
     );
   }
 }
+
 export default App;

@@ -15,7 +15,7 @@ const calculate = (numberOne, numberTwo, operation) => {
   } if (operation === '%') {
     return num1.mod(num2).toString();
   }
-  return 'not valid operation';
+  return 'Error';
 };
 
 export default calculate;
