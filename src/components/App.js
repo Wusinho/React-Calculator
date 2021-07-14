@@ -23,7 +23,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Display result={(next && next.toString()) || (total && total.toString())} />
+        <Display result={(next) || (total)} />
         <ButtonPanel clickHandler={(e) => handleClick(e)} />
       </div>
     );
