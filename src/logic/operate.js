@@ -1,27 +1,21 @@
 import Big from 'big.js';
 
 const calculate = (numberOne, numberTwo, operation) => {
-  const n1 = new Big(numberOne || 0);
-  const n2 = new Big(numberTwo || 0);
-  const n3 = new Big(100);
-  let result = 0;
+  const num1 = Big(numberOne);
+  const num2 = Big(numberTwo);
+
   if (operation === '/') {
-    result = (n1.div(n2));
-    return result.valueOf();
+    return num1.div(num2).toString();
   } if (operation === 'X') {
-    result = (n1.times(n2));
-    return result.valueOf();
-  } if (operation === '-') {
-    result = (n1.minus(n2));
-    return result.valueOf();
+    return num1.times(num2).toString();
   } if (operation === '+') {
-    result = (n1.plus(n2));
-    return result.valueOf();
+    return num1.plus(num2).toString();
+  } if (operation === '-') {
+    return num1.minus(num2).toString();
   } if (operation === '%') {
-    result = (n1.div(n3));
-    return result.valueOf();
+    return num1.mod(num2).toString();
   }
-  return result;
+  return 'not valid operation';
 };
 
-export { calculate as default };
+export default calculate;
