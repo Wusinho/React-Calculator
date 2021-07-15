@@ -12,8 +12,6 @@ const calculate = (numberOne, numberTwo, operation) => {
     return num1.plus(num2).toString();
   } if (operation === '-') {
     return num1.minus(num2).toString();
-  } if (operation === '%') {
-    return num1.mod(num2).toString();
   }
   return 'Error';
 };
