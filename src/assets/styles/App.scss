@@ -28,11 +28,12 @@ a:hover {
 }
 
 .nav-links{
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  padding: 0 20px;
 }
 
 .board-row::after {
@@ -74,4 +75,10 @@ a:hover {
 
 .square:hover {
   background-color: lightblue;
+}
+
+.home,
+.calculator,
+.quote {
+  padding: 10px;
 }

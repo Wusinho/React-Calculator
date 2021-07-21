@@ -19,7 +19,7 @@ const Calculator = () => {
   const { total, next } = value;
 
   return (
-    <div>
+    <div className="calculator">
       <Display result={(next || total)} />
       <ButtonPanel clickHandler={(e) => handleClick(e)} />
     </div>
