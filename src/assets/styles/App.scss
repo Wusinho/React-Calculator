@@ -37,21 +37,23 @@ a:hover {
 }
 
 .board-row::after {
-  clear: both;
-  content: "";
-  display: table;
+  display: grid;
+  margin: 1px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .rectangle {
-  background: #fff;
-  border: 1px solid #999;
+  background: gray;
+  border-bottom: none;
   font-size: 50px;
   font-weight: bold;
   line-height: 100px;
   height: 100px;
-  padding: 0;
   text-align: right;
-  width: 395px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .value {
@@ -60,17 +62,17 @@ a:hover {
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid#d1d1d1;
+  border-bottom: 1px solid #bababa;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 100px;
   height: 100px;
-  margin-right: -1px;
-  margin-top: -1px;
+  min-width: 25%;
   padding: 0;
   text-align: center;
-  width: 100px;
 }
 
 .square:hover {
@@ -81,4 +83,16 @@ a:hover {
 .calculator,
 .quote {
   padding: 10px;
+}
+
+.zero {
+  width: 350px;
+}
+
+.op {
+  background-color: #f5913e;
+}
+
+.calculator {
+  width: 700px;
 }

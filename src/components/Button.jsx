@@ -5,9 +5,13 @@ const Squarebtn = ({ buttonName, handlerClick, type }) => {
   const handleClick = () => handlerClick(buttonName);
   let color = '';
   if (type === 'sp') {
-    color = 'purple';
+    color = 'sp';
   } if (type === 'op') {
-    color = 'blue';
+    color = 'op';
+  } if (type === 'num') {
+    color = 'num';
+  } if (type === 'zero') {
+    color = 'zero';
   }
 
   return (
