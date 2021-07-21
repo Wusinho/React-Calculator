@@ -1,5 +1,5 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 20px "Century Gothic", Futura, sans-serif;
   margin: 0px;
 }
 
@@ -16,10 +16,16 @@ nav {
   color: white;
 }
 
+h1 {
+  font-size: 35px;
+}
+
+
 a {
   text-decoration: none;
   color: white;
   transition-duration: 600ms;
+  font-size: 30px;
 }
 
 a:hover {
@@ -54,6 +60,8 @@ a:hover {
   color: white;
   font-weight: bold;
   margin-right: 10px;
+  transition-duration: 800ms;
+
 }
 
 .value {
@@ -73,10 +81,14 @@ a:hover {
   min-width: 25%;
   padding: 0;
   text-align: center;
+  transition-duration: 300ms;
+
 }
 
 .square:hover {
   background-color: lightblue;
+  transition-duration: 300ms;
+
 }
 
 .home,
@@ -94,6 +106,7 @@ a:hover {
 }
 
 .calculator {
+  padding-top: 30px;
   width: 700px;
   margin: auto;
 }
