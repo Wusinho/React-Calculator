@@ -11,7 +11,7 @@ import '../assets/styles/App.scss';
 const App = () => (
   <Router>
     <nav>
-      <ul>
+      <ul className="nav-links">
         <li>
           <Link to="/">Home</Link>
         </li>

@@ -1,11 +1,38 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 0px;
 }
 
 ol,
 ul {
   padding-left: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(71, 78, 90);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 600ms;
+}
+
+a:hover {
+  color: rgb(207, 203, 203);
+  transition-duration: 400ms;
+}
+
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
 }
 
 .board-row::after {
@@ -48,7 +75,3 @@ ul {
 .square:hover {
   background-color: lightblue;
 }
-
-// .kbd-navigation .square:focus {
-//   background: #ddd;
-// }
