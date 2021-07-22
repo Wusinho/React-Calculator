@@ -1,6 +1,13 @@
+$rectangle-color: gray;
+$regular-btn: #e0e0e0;
+$operator-btn: #f5913e;
+$hover-btn: lightblue;
+$nav-color: rgb(71, 78, 90);
+
 body {
   font: 20px "Century Gothic", Futura, sans-serif;
   margin: 0;
+  background-color: rgb(233, 232, 232);
 }
 
 ol,
@@ -12,12 +19,24 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(71, 78, 90);
+  background-color: $nav-color;
   color: white;
+  border-top: 1px solid rgb(51, 56, 65);
+  border-bottom: 1px solid rgb(51, 56, 65);
 }
 
 h1 {
   font-size: 35px;
+  color: $operator-btn;
+}
+
+h3 {
+  color: $rectangle-color;
+}
+
+
+p {
+  color: $nav-color;
 }
 
 a {
@@ -28,7 +47,7 @@ a {
 }
 
 a:hover {
-  color: rgb(207, 203, 203);
+  color: $hover-btn;
   transition-duration: 400ms;
 }
 
@@ -48,7 +67,7 @@ a:hover {
 }
 
 .rectangle {
-  background: gray;
+  background: $rectangle-color;
   border-bottom: none;
   font-size: 50px;
   font-weight: bold;
@@ -66,7 +85,7 @@ a:hover {
 }
 
 .square {
-  background: #e0e0e0;
+  background: $regular-btn;
   border-left: 1px solid #d1d1d1;
   border-right: 1px solid#d1d1d1;
   border-bottom: 1px solid #bababa;
@@ -82,14 +101,13 @@ a:hover {
 }
 
 .square:hover {
-  background-color: lightblue;
+  background-color: $hover-btn;
   transition-duration: 300ms;
 }
 
 .home,
-.calculator,
 .quote {
-  padding: 10px;
+  padding: 10px 50px;
 }
 
 .zero {
@@ -97,7 +115,7 @@ a:hover {
 }
 
 .op {
-  background-color: #f5913e;
+  background-color: $operator-btn;
 }
 
 .calculator {

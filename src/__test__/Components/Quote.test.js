@@ -10,6 +10,6 @@ it('Should renders correctly', () => {
 
 it('Should display header information', () => {
   render(<Quote />);
-  const elem = screen.getByText('QUOTE');
+  const elem = screen.getByText('Quote');
   expect(elem).toBeInTheDocument();
 });
