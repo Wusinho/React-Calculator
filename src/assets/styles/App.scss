@@ -34,7 +34,6 @@ h3 {
   color: $rectangle-color;
 }
 
-
 p {
   color: $nav-color;
 }
@@ -62,7 +61,6 @@ a:hover {
 
 .board-row::after {
   display: grid;
-  margin: 1px;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -78,6 +76,7 @@ a:hover {
   color: white;
   margin-right: 10px;
   transition-duration: 800ms;
+  border-bottom: 1px solid #bababa;
 }
 
 .value {
@@ -89,8 +88,9 @@ a:hover {
   border-left: 1px solid #d1d1d1;
   border-right: 1px solid#d1d1d1;
   border-bottom: 1px solid #bababa;
+  border-top: none;
   float: left;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
   line-height: 100px;
   height: 100px;
@@ -111,7 +111,7 @@ a:hover {
 }
 
 .zero {
-  width: 350px;
+  width: 50%;
 }
 
 .op {
