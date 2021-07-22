@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render correctly 1`] = `
+<div
+  className="board-row"
+>
+  <div
+    className="rectangle"
+  >
+    <div
+      className="value"
+    >
+      some value
+    </div>
+  </div>
+</div>
+`;

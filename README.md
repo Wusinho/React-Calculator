@@ -4,7 +4,7 @@
 
 This project is an App Calculator using React.
 
-![screenshot](./src/assets/static/Screenshot.png)
+![screenshot](./src/assets/static/Calculator.png)
 
 ## Live View
 
@@ -47,7 +47,7 @@ Run the following comands in the terminal in the next order:
 ### To run the tests for this project in your local environment
 
 - Step1:
-  $ cd npm run watch
+  $ cd npm run test
 
 - Step2:
   press key 'a' from keyboard to run all test

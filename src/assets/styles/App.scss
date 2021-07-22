@@ -1,6 +1,13 @@
+$rectangle-color: gray;
+$regular-btn: #e0e0e0;
+$operator-btn: #f5913e;
+$hover-btn: lightblue;
+$nav-color: rgb(71, 78, 90);
+
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font: 20px "Century Gothic", Futura, sans-serif;
+  margin: 0;
+  background-color: rgb(233, 232, 232);
 }
 
 ol,
@@ -8,22 +15,67 @@ ul {
   padding-left: 30px;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $nav-color;
+  color: white;
+  border-top: 1px solid rgb(51, 56, 65);
+  border-bottom: 1px solid rgb(51, 56, 65);
+}
+
+h1 {
+  font-size: 35px;
+  color: $operator-btn;
+}
+
+h3 {
+  color: $rectangle-color;
+}
+
+p {
+  color: $nav-color;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 600ms;
+  font-size: 30px;
+}
+
+a:hover {
+  color: $hover-btn;
+  transition-duration: 400ms;
+}
+
+.nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0 20px;
+}
+
 .board-row::after {
-  clear: both;
-  content: "";
-  display: table;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .rectangle {
-  background: #fff;
-  border: 1px solid #999;
+  background: $rectangle-color;
   font-size: 50px;
   font-weight: bold;
   line-height: 100px;
   height: 100px;
-  padding: 0;
   text-align: right;
-  width: 395px;
+  width: 100%;
+  color: white;
+  margin-right: 10px;
+  transition-duration: 800ms;
+  border-bottom: 1px solid #bababa;
 }
 
 .value {
@@ -31,24 +83,42 @@ ul {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: $regular-btn;
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid#d1d1d1;
+  border-bottom: 1px solid #bababa;
+  border-top: none;
   float: left;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
   line-height: 100px;
   height: 100px;
-  margin-right: -1px;
-  margin-top: -1px;
+  min-width: 25%;
   padding: 0;
   text-align: center;
-  width: 100px;
+  transition-duration: 300ms;
 }
 
 .square:hover {
-  background-color: lightblue;
+  background-color: $hover-btn;
+  transition-duration: 300ms;
 }
 
-// .kbd-navigation .square:focus {
-//   background: #ddd;
-// }
+.home,
+.quote {
+  padding: 10px 50px;
+}
+
+.zero {
+  width: 50%;
+}
+
+.op {
+  background-color: $operator-btn;
+}
+
+.calculator {
+  padding-top: 30px;
+  width: 700px;
+  margin: auto;
+}

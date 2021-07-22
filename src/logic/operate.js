@@ -5,7 +5,7 @@ const calculate = (numberOne, numberTwo, operation) => {
   const num2 = Big(numberTwo);
 
   if (operation === '/') {
-    return num1.div(num2).toString();
+    return numberTwo !== '0' ? num1.div(num2) : 'Error, not divisible';
   } if (operation === 'X') {
     return num1.times(num2).toString();
   } if (operation === '+') {
