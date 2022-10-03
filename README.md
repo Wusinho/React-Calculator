@@ -78,7 +78,3 @@ This project is [MIT](LICENSE) licensed.
 \*\*
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Microverse
-- Anyone whose detailed code inspired the creation of this project.
